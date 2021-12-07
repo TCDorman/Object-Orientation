@@ -309,9 +309,13 @@ const dog = {
       - color: string
       - price: number
   */
-  
   //Code Here
-  
+  let android = new Phone (`android`,`thisOne`,512,`blue`,5, false)
+
+let payPhone = new Phone(`DELL`, `windows vista`, 8, `grey`, 4440409458949585899, false)
+// console.log(payPhone)
+let walmartBurner = new Phone ('flip phone', 'sketchy 5', 1, `black`, -10, false)
+console.log(walmartBurner)
   /* 
     Call the changePrice function on one of your phones, 
     don't forget to pass in a new price 
@@ -321,7 +325,10 @@ const dog = {
   
   //Code Here 
   
-  
+  payPhone.changePrice(69);
+console.log(payPhone)
+console.log(`◔_◔`)
+
   /*
     Now call the sell method on one of your other phone objects
   
@@ -329,7 +336,10 @@ const dog = {
   */
   
   //Code Here 
-  
+  android.sell()
+// console.log(android.sell())
+// walmartBurner.sell()
+// console.log(walmartBurner)
   
   //////////////////////////// PROBLEM 15 ////////////////////////////
   
@@ -348,7 +358,7 @@ const dog = {
   //do not edit this object
   
   //Code Here 
-  
+  let colorsCopy = {...colors}
   
   
   /*
@@ -376,7 +386,8 @@ const dog = {
   //do not edit the objects above
   
   //Code Here
-  
+  const helensInfo = {...contactInfo,...shippingInfo}
+// console.log(helensInfo)
   
   //Print helensInfo to see what it looks like, there should be no repeating properties.
   
@@ -394,7 +405,22 @@ const dog = {
   */
   
   //Code Here 
+  class Vehicle {
+    constructor(capacity, color, mileage){
+      this.capacity = capacity
+      this.color = color
+      this.mileage = mileage
+    }
+    move(miles) {
+      this.mileage = this.mileage + miles
   
+    }
+  }
+  
+  let myCar = new Vehicle(4,`black`,100000)
+  myCar.move(12320)
+  console.log(myCar)
+  console.log('hi')
   
   /*
     Create a vehicle using your new class and save it to a variable called myFirstVehicle
