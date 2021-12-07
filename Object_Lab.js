@@ -162,7 +162,18 @@ const dog = {
   */
   
   //Code Here
-  
+  function ingredients(obj) {
+    let {carb, fat, protein} = obj
+    let array = [];
+    array.push(carb, fat, protein)
+    return array
+  }
+  const egg = {
+    carb:`1`,
+    fat:`2`,
+    protein:`3`
+  }
+  ingredients(egg)
   
   
   //////////////////////////// PROBLEM 10 ////////////////////////////
