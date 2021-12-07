@@ -427,7 +427,9 @@ console.log(`◔_◔`)
   */
   
   //Code Here
-  
+  let myFirstVehicle = new Vehicle(3, `blue`, 10984)
+console.log(myFirstVehicle)
+
   
   /* 
     Now we'll create a class that's based off of the vehicle class. 
@@ -438,17 +440,27 @@ console.log(`◔_◔`)
   */
   
   //Code Here
-  
+  class Motorcycle extends Vehicle {
+    constructor(capacity, color, mileage, make, isCool) {
+      super(capacity, color, mileage)
+      this.make = make;
+      this.isCool = isCool;
+    }
+  }
+
+
   /*
     Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
   */
   
   //Code Here 
-  
+  let myBike = new Motorcycle(2, `blue`, 1, `huffy`, `yes`)
+// console.log(myBike)
   /*
     Call the move function on myFirstMotorcycle (don't forget the parameter)
   */
-  
+    myBike.move(12321)
+    // console.log(myBike)
   /*
     Let's make another class based off of Vehicle. 
   
@@ -466,7 +478,24 @@ console.log(`◔_◔`)
   */
   
   //Code Here
-  
+  class Boat extends Vehicle {
+    constructor (capacity, color, mileage, make, isCool, name, type, isSeaWorthy){
+      super(capacity, color, mileage, make, isCool)
+      this.name = name;
+      this.type = type;
+      this.isSeaWorthy = isSeaWorthy;
+    }
+    checkSeaWorthyness(){
+      if (this.isSeaWorthy === true){
+        console.log(`The ${this.color} ${this.type} named ${this.name} is seaworthy!`)
+      } else {
+        console.log(`You need to get your ${this.type} in shape!`)
+      }
+    }
+    performMaintenance(){
+      this.isSeaWorthy = true
+    }
+  }
   
   /*
     Create a new boat using your class. You can choose whatever values you like for all the 
@@ -474,21 +503,23 @@ console.log(`◔_◔`)
   */
   
   //Code Here
-  
+  let beatBoat = new Boat (4, `Rusty`, `18000 hrs.`, `SeaRay`, `Yes`, `Moby`, `in board/ out board`, false)
+
   /*
     Call the checkSeaworthiness method on your new boat
   */
   
   //Code Here
-  
+  beatBoat.checkSeaWorthyness()
   /*
     Now run the performMaintenance method on your boat
   */
   
   //Code Here 
-  
+  beatBoat.performMaintenance()
   /*
     Check the seaworthiness once more (you should be ready for the water!)
   */
   
   //Code Here
+  beatBoat.checkSeaWorthyness()
