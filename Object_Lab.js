@@ -238,6 +238,21 @@ const dog = {
   */
   
   //Code here
+  class Wizard {
+    constructor(name, age, favoriteSpell) {
+      this.name = name;
+      this.age = age;
+      this.favoriteSpell = favoriteSpell;
+    }
+  
+    castSpell() {
+      console.log(`${this.name} has cast ${this.favoriteSpell}`)
+    }
+  }
+  let harry = new Wizard (`harry`, 12, `patronusligmonus`)
+  harry.castSpell()
+  
+  console.log('(┛ಠ_ಠ)┛彡┻━┻')
   
   //////////////////////////// PROBLEM 14 ////////////////////////////
   /*
@@ -263,7 +278,27 @@ const dog = {
   */
   
   //Code Here
-  
+  class Phone{
+    constructor (brand, model, storage, color, price, soldProperties){
+      this.brand = brand;
+      this.model = model;
+      this.storage = storage;
+      this.color = color;
+      this.price = price;
+      this.soldProperties = soldProperties;
+    }
+    sell(){
+      this.soldProperites = true
+      return `${this.brand} ${this.model} has been sold. jk it's free.`
+    }
+    changePrice(newPrice){
+      return this.price = newPrice
+      
+    }
+  }
+  let iphone = new Phone ('apple',`12 pro max`,'512gb',`space grey`,`$1123423`, false)
+  iphone.changePrice(123)
+  console.log(iphone.price)
   
   /*
       Next make three new phone instances using your class.
