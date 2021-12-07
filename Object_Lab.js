@@ -195,7 +195,10 @@ const dog = {
   */
   
   //Code Here
-  
+    user.name = `Bryan G. Smith`;
+    user.email = `bryan.smith@devmountain.in`;
+
+    //console.log(user)
   
   //////////////////////////// PROBLEM 11 ////////////////////////////
   /*
@@ -203,8 +206,8 @@ const dog = {
   */
   
   //Code Here
-  
-  
+  delete user.age
+  //console.log(user)
   //////////////////////////// PROBLEM 12 ////////////////////////////
   /*
     Create a class called 'Cat'. Make sure to call your constructor, and require these 3 parameters: name, age, color.
@@ -214,7 +217,17 @@ const dog = {
   
   //Code here
   
+  class Cat{
+    constructor(name, age, color) {
+      this.name = name
+      this.age = age
+      this.color = color
+    } 
+  }
+  let mittens = new Cat(`mittens`,6,`black`)
+  let cat2 = new Cat(`ramses`, 2, `grey`)
   
+  console.log(cat2.name, mittens.name)
   
   //////////////////////////// PROBLEM 13 ////////////////////////////
   /*
